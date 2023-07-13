@@ -1,21 +1,18 @@
 import './App.css';
-import Slider from '@mui/material/Slider';
+import {Routes, Route} from 'react-router-dom';
+import HomePage from './Pages/HomePage/HomePage';
 
 function App() {
   return (
     <div className="App">
+
       <h1 className="text-3xl font-bold underline">
         Glide
       </h1>
 
-      {/* Testing MUI */}
-      <Slider
-          size="small"
-          defaultValue={70}
-          aria-label="Small"
-          valueLabelDisplay="auto"
-        />
-      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+      </Routes>
 
     </div>
   );
